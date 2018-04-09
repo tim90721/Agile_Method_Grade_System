@@ -1,0 +1,28 @@
+
+public class UI {
+	GradeSystem gradeSystem;
+	
+	public UI(){
+		gradeSystem = new GradeSystem();
+	}
+	
+	public void promptCommand(){
+		throw new UnsupportedOperationException();
+	}
+	
+	public boolean checkID(){
+		throw new UnsupportedOperationException();
+	}
+	
+	public void promptID(){
+		throw new UnsupportedOperationException();
+	}
+	
+	public void showFinishMsg(){
+		throw new UnsupportedOperationException();
+	}
+	
+	public void showWelcomMsg(){
+		throw new UnsupportedOperationException();
+	}
+}
