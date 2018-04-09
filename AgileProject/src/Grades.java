@@ -14,7 +14,7 @@ public class Grades {
 		
 	}
 	
-	public int calculateTotalGrade(List<Float> weights){
+	public int calculateTotalGrade(List<Double> weights){
 		throw new UnsupportedOperationException();
 	}
 }
