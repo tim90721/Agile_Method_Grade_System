@@ -10,7 +10,7 @@ public class UI {
 		throw new UnsupportedOperationException();
 	}
 	
-	public boolean checkID(){
+	public boolean checkID(String ID){
 		throw new UnsupportedOperationException();
 	}
 	
