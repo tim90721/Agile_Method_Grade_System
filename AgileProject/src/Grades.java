@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Grades {
 	String ID;
@@ -13,7 +14,7 @@ public class Grades {
 		
 	}
 	
-	public int calculateTotalGrade(int weight){
+	public int calculateTotalGrade(List<Float> weights){
 		throw new UnsupportedOperationException();
 	}
 }
