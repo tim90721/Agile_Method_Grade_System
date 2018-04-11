@@ -1,6 +1,9 @@
+package test;
 import static org.junit.Assert.*;
 import java.util.*;
 import org.junit.Test;
+
+import main.Grades;
 
 
 /*****************************************************************************-
@@ -38,7 +41,5 @@ public class TestCalculateTotalGrade {
 		List<Double> weight = Arrays.asList(0.1, 0.1, 0.0, 0.4, 0.4);
 		int actual_result = aGrades.calculateTotalGrade(weight);
 		assertEquals (expected_result, actual_result);
-		
 	}
-
 }
