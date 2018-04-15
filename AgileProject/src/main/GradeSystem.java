@@ -1,7 +1,9 @@
+package main;
 import java.util.ArrayList;
 
 public class GradeSystem {
-	ArrayList<Grades> grades;
+	private ArrayList<Grades> grades;
+	private ArrayList<Double> weights;
 	
 	public GradeSystem(){
 		grades = new ArrayList<Grades>();
@@ -11,15 +13,19 @@ public class GradeSystem {
 		throw new UnsupportedOperationException();
 	}
 	
-	public void showGrade(String ID){
+	public String showGrade(String ID){
 		throw new UnsupportedOperationException();
 	}
 	
-	public void showRank(String ID){
+	public String showRank(String ID){
 		throw new UnsupportedOperationException();
 	}
 	
-	public void updateWeight(int weight){
+	public boolean updateWeight(ArrayList<Double> weight){
+		throw new UnsupportedOperationException();
+	}
+	
+	public Double getWeight(int index) {
 		throw new UnsupportedOperationException();
 	}
 }
