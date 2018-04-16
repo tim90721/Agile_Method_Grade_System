@@ -7,7 +7,7 @@ public class UI {
 		gradeSystem = new GradeSystem();
 	}
 	
-	public void promptCommand(){
+	public String promptCommand(){
 		throw new UnsupportedOperationException();
 	}
 	
