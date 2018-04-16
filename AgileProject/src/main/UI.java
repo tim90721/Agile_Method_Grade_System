@@ -15,8 +15,8 @@ public class UI {
 		throw new UnsupportedOperationException();
 	}
 	
-	public String promptID(String ID){
-		return ID;
+	public String promptID(){
+		throw new UnsupportedOperationException();
 		
 	}
 	
