@@ -1,25 +1,25 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.io.*;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import main.UI;
 
 class TestShowWelcomeMsg {
 	
 	private UI aUI = new UI();
-	final String WelcomMsg = "Welcom Åwªï!!!\r\n";
+	final String WelcomMsg = "Welcom ï¿½wï¿½ï¿½!!!\r\n";
 	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
-	@BeforeEach
+	@Before
 	void setUp() throws Exception {
 		System.setOut(new PrintStream(outContent));
 	}
 
-	@AfterEach
+	@After
 	void tearDown() throws Exception {
 		aUI = null;
 	}

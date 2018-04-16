@@ -1,14 +1,14 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import main.UI;
 
@@ -25,12 +25,12 @@ class TestPromptCommand {
 	private ByteArrayInputStream inContent;
 	private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
-	@BeforeEach
+	@Before
 	void setUp() throws Exception {
 		System.setOut (new PrintStream (outContent));
 	}
 
-	@AfterEach
+	@After
 	void tearDown() throws Exception {
 		aUI = null;
 		outContent = null;
@@ -41,7 +41,7 @@ class TestPromptCommand {
 		inContent = new ByteArrayInputStream("showGrade".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
-		assertEquals("¿é¤J commend : showGrade, showRank, updateWeights ©Î exit¡H", outContent);
+		assertEquals("ï¿½ï¿½J commend : showGrade, showRank, updateWeights ï¿½ï¿½ exitï¿½H", outContent);
 		assertEquals ("showGrade", result);
 	}
 
@@ -50,7 +50,7 @@ class TestPromptCommand {
 		inContent = new ByteArrayInputStream("showRank".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
-		assertEquals("¿é¤J commend : showGrade, showRank, updateWeights ©Î exit¡H", outContent);
+		assertEquals("ï¿½ï¿½J commend : showGrade, showRank, updateWeights ï¿½ï¿½ exitï¿½H", outContent);
 		assertEquals ("showRank", result);
 	}
 
@@ -59,7 +59,7 @@ class TestPromptCommand {
 		inContent = new ByteArrayInputStream("updateWeights".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
-		assertEquals("¿é¤J commend : showGrade, showRank, updateWeights ©Î exit¡H", outContent);
+		assertEquals("ï¿½ï¿½J commend : showGrade, showRank, updateWeights ï¿½ï¿½ exitï¿½H", outContent);
 		assertEquals ("updateWeights", result);
 	}
 
@@ -68,7 +68,7 @@ class TestPromptCommand {
 		inContent = new ByteArrayInputStream("exit".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
-		assertEquals("¿é¤J commend : showGrade, showRank, updateWeights ©Î exit¡H", outContent);
+		assertEquals("ï¿½ï¿½J commend : showGrade, showRank, updateWeights ï¿½ï¿½ exitï¿½H", outContent);
 		assertEquals ("exit", result);
 	}
 
@@ -77,7 +77,7 @@ class TestPromptCommand {
 		inContent = new ByteArrayInputStream("showgrade".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
-		assertEquals("¿é¤J commend : showGrade, showRank, updateWeights ©Î exit¡H", outContent);
+		assertEquals("ï¿½ï¿½J commend : showGrade, showRank, updateWeights ï¿½ï¿½ exitï¿½H", outContent);
 		assertEquals ("showgrade", result);
 	}
 
@@ -86,7 +86,7 @@ class TestPromptCommand {
 		inContent = new ByteArrayInputStream("123456".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
-		assertEquals("¿é¤J commend : showGrade, showRank, updateWeights ©Î exit¡H", outContent);
+		assertEquals("ï¿½ï¿½J commend : showGrade, showRank, updateWeights ï¿½ï¿½ exitï¿½H", outContent);
 		assertEquals ("123456", result);
 	}
 

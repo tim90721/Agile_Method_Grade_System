@@ -1,17 +1,17 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import main.GradeSystem;
 
 /*****************************************************************************-
 class TestCalculateTotalGrade 
-aGrade: ID 962001051 name§õ«Â§Ê lab1 81  lab2 98  lab3 84  midTerm 90 finalExam 93
-aGrade: ID 962001044 name­â©v§Ê lab1 87  lab2 86  lab3 98  midTerm 88 finalExam 87
+aGrade: ID 962001051 nameï¿½ï¿½ï¿½Â§ï¿½ lab1 81  lab2 98  lab3 84  midTerm 90 finalExam 93
+aGrade: ID 962001044 nameï¿½ï¿½vï¿½ï¿½ lab1 87  lab2 86  lab3 98  midTerm 88 finalExam 87
 
 test case1: ID 962001051
 test case2: ID 962001044
@@ -34,13 +34,13 @@ class TestShowRank {
 	
 	@Test
 	public void testShowRank1() {
-		String output = "§õ«Â§Ê±Æ¦W²Ä1\n";
+		String output = "ï¿½ï¿½ï¿½Â§Ê±Æ¦Wï¿½ï¿½1\n";
 		assertEquals(output, gradeSystem.showRank("962001051"));
 	}
 
 	@Test
 	public void testShowRank2() {
-		String output = "­â©v§Ê±Æ¦W²Ä2\n";
+		String output = "ï¿½ï¿½vï¿½Ê±Æ¦Wï¿½ï¿½2\n";
 		assertEquals(output, gradeSystem.showRank("962001044"));
 	}
 	

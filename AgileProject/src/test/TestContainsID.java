@@ -1,20 +1,21 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import main.GradeSystem;
 
 /*****************************************************************************-
 class TestContainsID  
-test case 1: ID 962001044 (¥¿½T ­â©v§Ê)
-test case 2: ID 96z001044 (2¥´¦¨z)
-test case 3: ID 96200104 (º|³Ì«á4)
-test case 4: ID 123456789 (¿ù»~ID)
-test case 5: ID ¡§¡¨       (empty string)
+test case 1: ID 962001044 (ï¿½ï¿½ï¿½T ï¿½ï¿½vï¿½ï¿½)
+test case 2: ID 96z001044 (2ï¿½ï¿½ï¿½ï¿½z)
+test case 3: ID 96200104 (ï¿½|ï¿½Ì«ï¿½4)
+test case 4: ID 123456789 (ï¿½ï¿½ï¿½~ID)
+test case 5: ID ï¿½ï¿½ï¿½ï¿½       (empty string)
 **************************************************************************** */
 
 class TestContainsID {
