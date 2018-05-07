@@ -97,7 +97,7 @@ public class UI {
 	/** -------------------------------------------------------------------
 	showWelcomeMsg () 
 		1.	根據使用者輸入的ID從gradeSystem裡讀出姓名
-		2.	顯示訊息"Welcome" + 讀書的姓名  + "\r\n"
+		2.	顯示訊息"Welcome" + 讀出的姓名  + "\r\n"
 	--------------------------------------------------------------------- */
 	public void showWelcomMsg(){
 		throw new UnsupportedOperationException();
