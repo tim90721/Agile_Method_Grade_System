@@ -10,6 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import main.NoSuchCommandExceptions;
 import main.UI;
  
 /*
@@ -37,7 +38,7 @@ class TestPromptCommand {
 	}
 
 	@Test
-	void testPromptCommand1() {
+	void testPromptCommand1() throws NoSuchCommandExceptions{
 		inContent = new ByteArrayInputStream("showGrade".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
@@ -46,7 +47,7 @@ class TestPromptCommand {
 	}
 
 	@Test
-	void testPromptCommand2() {
+	void testPromptCommand2() throws NoSuchCommandExceptions{
 		inContent = new ByteArrayInputStream("showRank".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
@@ -55,7 +56,7 @@ class TestPromptCommand {
 	}
 
 	@Test
-	void testPromptCommand3() {
+	void testPromptCommand3() throws NoSuchCommandExceptions{
 		inContent = new ByteArrayInputStream("updateWeights".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
@@ -64,7 +65,7 @@ class TestPromptCommand {
 	}
 
 	@Test
-	void testPromptCommand4() {
+	void testPromptCommand4() throws NoSuchCommandExceptions{
 		inContent = new ByteArrayInputStream("exit".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
@@ -73,7 +74,7 @@ class TestPromptCommand {
 	}
 
 	@Test
-	void testPromptCommand5() {
+	void testPromptCommand5() throws NoSuchCommandExceptions{
 		inContent = new ByteArrayInputStream("showgrade".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();
@@ -82,7 +83,7 @@ class TestPromptCommand {
 	}
 
 	@Test
-	void testPromptCommand6() {
+	void testPromptCommand6() throws NoSuchCommandExceptions{
 		inContent = new ByteArrayInputStream("123456".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptCommand();

@@ -24,12 +24,10 @@ test case4: ID ""
 
 class TestShowGrade {
 	private GradeSystem gradeSystem;
-	private ArrayList<Double> weight = new ArrayList<Double>(Arrays.asList(0.1, 0.1, 0.1, 0.3, 0.4));
 	
 	@Before
 	public void setUp() {
 		gradeSystem = new GradeSystem();
-		gradeSystem.updateWeight(weight);
 	}
 	
 	@After

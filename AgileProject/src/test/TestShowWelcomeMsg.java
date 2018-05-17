@@ -8,10 +8,16 @@ import org.junit.Before;
 import org.junit.Test;
 import main.UI;
 
+/*****************************************************************************-
+class TestShowWelcomeMsg
+aGrade: ID 962001051 name李威廷 
+
+test case1: ID 962001051
+**************************************************************************** */
 class TestShowWelcomeMsg {
 	
 	private UI aUI = new UI();
-	final String welcomMsg = "Welcome 歡迎!!!\r\n";
+	final String welcomMsg = "Welcome 歡迎!!!";
 
 	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
@@ -27,8 +33,9 @@ class TestShowWelcomeMsg {
 
 	@Test
 	void test() {
-		aUI.showWelcomMsg();
-		assertEquals(welcomMsg, outContent);
+		String ID = "962001051";
+		aUI.showWelcomeMsg(ID);
+		assertEquals(welcomMsg + "李威廷", outContent);
 	}
 
 }

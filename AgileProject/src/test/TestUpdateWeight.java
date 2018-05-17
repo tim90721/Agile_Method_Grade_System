@@ -2,6 +2,7 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -36,8 +37,10 @@ class TestUpdateWeight {
 	
 	@Test
 	public void testUpdateWeight1() {
-		ArrayList<Double> newWeights = new ArrayList<Double>(Arrays.asList(0.1, 0.1, 0.2, 0.3, 0.3));
-		assertEquals(true, gradeSystem.updateWeight(newWeights));
+		ArrayList<Double> newWeights = new ArrayList<Double>(Arrays.asList(0.2, 0.2, 0.1, 0.2, 0.3));
+		ByteArrayInputStream inContent = new ByteArrayInputStream("0.2 0.2 0.1 0.2 0.3".getBytes());
+		System.setIn(inContent);
+		assertEquals(true, gradeSystem.updateWeight());
 		for(int i = 0;i < 5;i++) {
 			assertEquals(newWeights.get(i), gradeSystem.getWeight(i));
 		}
@@ -46,8 +49,10 @@ class TestUpdateWeight {
 	@Test
 	public void testUpdateWeight2() {
 		ArrayList<Double> oldWeights = new ArrayList<Double>(Arrays.asList(0.1, 0.1, 0.1, 0.3, 0.4));
-		ArrayList<Double> newWeights = new ArrayList<Double>(Arrays.asList(0.1, 0.2, 0.2, 0.3, 0.3));
-		assertEquals(false, gradeSystem.updateWeight(newWeights));
+//		ArrayList<Double> newWeights = new ArrayList<Double>(Arrays.asList(0.1, 0.2, 0.2, 0.3, 0.3));
+		ByteArrayInputStream inContent = new ByteArrayInputStream("0.1 0.2 0.2 0.3 0.3".getBytes());
+		System.setIn(inContent);
+		assertEquals(false, gradeSystem.updateWeight());
 		for(int i = 0;i < 5;i++) {
 			assertEquals(oldWeights.get(i), gradeSystem.getWeight(i));
 		}
@@ -57,7 +62,9 @@ class TestUpdateWeight {
 	public void testUpdateWeight3() {
 		ArrayList<Double> oldWeights = new ArrayList<Double>(Arrays.asList(0.1, 0.1, 0.1, 0.3, 0.4));
 		ArrayList<Double> newWeights = new ArrayList<Double>(Arrays.asList(0.01, 0.2, 0.2, 0.3, 0.3));
-		assertEquals(false, gradeSystem.updateWeight(newWeights));
+		ByteArrayInputStream inContent = new ByteArrayInputStream("0.01 0.2 0.2 0.3 0.3".getBytes());
+		System.setIn(inContent);
+		assertEquals(false, gradeSystem.updateWeight());
 		for(int i = 0;i < 5;i++) {
 			assertEquals(oldWeights.get(i), gradeSystem.getWeight(i));
 		}

@@ -34,13 +34,13 @@ class TestShowRank {
 	
 	@Test
 	public void testShowRank1() {
-		String output = "李威廷排名第1\n";
+		String output = "李威廷排名第1";
 		assertEquals(output, gradeSystem.showRank("962001051"));
 	}
 
 	@Test
 	public void testShowRank2() {
-		String output = "凌宗廷排名第2\n";
+		String output = "凌宗廷排名第2";
 		assertEquals(output, gradeSystem.showRank("962001044"));
 	}
 	

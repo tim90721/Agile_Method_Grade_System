@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import main.NoSuchIDExceptions;
 import main.UI;
 
 
@@ -17,7 +18,7 @@ test case 5: ID ¡§¡¨       (empty string)
 public class TestCheckID {
 
 	@Test
-	public void testCheckID1() {
+	public void testCheckID1() throws NoSuchIDExceptions{
 		UI aUI = new UI();
 		String ID = "962001044";
 		boolean expected_result = true;		
@@ -25,7 +26,7 @@ public class TestCheckID {
 		assertEquals (expected_result, actual_result);
 	}
 	@Test
-	public void testCheckID2() {
+	public void testCheckID2() throws NoSuchIDExceptions{
 		UI aUI = new UI();
 		String ID = "96z001044";
 		boolean expected_result = true;		
@@ -33,7 +34,7 @@ public class TestCheckID {
 		assertEquals (expected_result, actual_result);
 	}
 	@Test
-	public void testCheckID3() {
+	public void testCheckID3() throws NoSuchIDExceptions{
 		UI aUI = new UI();
 		String ID = "96200104";
 		boolean expected_result = true;		
@@ -41,7 +42,7 @@ public class TestCheckID {
 		assertEquals (expected_result, actual_result);
 	}
 	@Test
-	public void testCheckID4() {
+	public void testCheckID4() throws NoSuchIDExceptions{
 		UI aUI = new UI();
 		String ID = "123456789";
 		boolean expected_result = true;		
@@ -49,7 +50,7 @@ public class TestCheckID {
 		assertEquals (expected_result, actual_result);
 	}
 	@Test
-	public void testCheckID5() {
+	public void testCheckID5() throws NoSuchIDExceptions{
 		UI aUI = new UI();
 		String ID = "";
 		boolean expected_result = true;		
