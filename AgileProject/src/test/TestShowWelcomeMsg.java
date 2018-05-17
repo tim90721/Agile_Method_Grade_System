@@ -11,7 +11,7 @@ import main.UI;
 class TestShowWelcomeMsg {
 	
 	private UI aUI = new UI();
-	final String WelcomMsg = "Welcom ï¿½wï¿½ï¿½!!!\r\n";
+	final String WelcomMsg = "Welcome Åwªï!!!\r\n";
 	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
 	@Before
