@@ -33,7 +33,7 @@ class TestPromptID {
 		inContent = new ByteArrayInputStream("Q".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptID();
-		assertEquals("ï¿½ï¿½JIDï¿½ï¿½ Q (ï¿½ï¿½ï¿½ï¿½ï¿½Ï¥ï¿½)ï¿½H", outContent);
+		assertEquals("¿é¤JID©Î Q (µ²§ô¨Ï¥Î)¡H", outContent);
 		assertEquals ("Q", result);
 	}
 	
@@ -42,7 +42,7 @@ class TestPromptID {
 		inContent = new ByteArrayInputStream("962001044".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptID();
-		assertEquals("ï¿½ï¿½JIDï¿½ï¿½ Q (ï¿½ï¿½ï¿½ï¿½ï¿½Ï¥ï¿½)ï¿½H", outContent);
+		assertEquals("¿é¤JID©Î Q (µ²§ô¨Ï¥Î)¡H", outContent);
 		assertEquals ("962001044", result);
 	}
 	
@@ -51,7 +51,7 @@ class TestPromptID {
 		inContent = new ByteArrayInputStream("1234567".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptID();
-		assertEquals("ï¿½ï¿½JIDï¿½ï¿½ Q (ï¿½ï¿½ï¿½ï¿½ï¿½Ï¥ï¿½)ï¿½H", outContent);
+		assertEquals("¿é¤JID©Î Q (µ²§ô¨Ï¥Î)¡H", outContent);
 		assertEquals ("1234567", result);
 	}
 

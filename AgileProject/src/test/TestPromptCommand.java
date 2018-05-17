@@ -11,11 +11,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import main.UI;
-
+ 
 /*
 prompt: showGrade, showRank, updateWeights, exit
 */
-
+ 
 
 
 class TestPromptCommand {

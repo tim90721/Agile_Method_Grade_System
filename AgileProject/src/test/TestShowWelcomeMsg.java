@@ -9,7 +9,7 @@ import org.junit.Test;
 import main.UI;
 
 class TestShowWelcomeMsg {
-	
+	 
 	private UI aUI = new UI();
 	final String WelcomMsg = "Welcome Åwªï!!!\r\n";
 	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
