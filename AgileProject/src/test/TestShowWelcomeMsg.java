@@ -11,7 +11,8 @@ import main.UI;
 class TestShowWelcomeMsg {
 	
 	private UI aUI = new UI();
-	final String WelcomMsg = "Welcome Åwªï!!!\r\n";
+	final String welcomMsg = "Welcome Åwªï!!!\r\n";
+
 	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
 	@Before
@@ -27,7 +28,7 @@ class TestShowWelcomeMsg {
 	@Test
 	void test() {
 		aUI.showWelcomMsg();
-		assertEquals(WelcomMsg, outContent);
+		assertEquals(welcomMsg, outContent);
 	}
 
 }
