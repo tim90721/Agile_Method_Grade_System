@@ -19,7 +19,7 @@ test case3: ID 1234567
 test case4: ID ""
 **************************************************************************** */
 
-class TestShowRank {
+public class TestShowRank {
 	private GradeSystem gradeSystem;
 	
 	@Before
@@ -34,13 +34,13 @@ class TestShowRank {
 	
 	@Test
 	public void testShowRank1() {
-		String output = "李威廷排名第1";
+		String output = "李威廷排名第22";
 		assertEquals(output, gradeSystem.showRank("962001051"));
 	}
 
 	@Test
 	public void testShowRank2() {
-		String output = "凌宗廷排名第2";
+		String output = "凌宗廷排名第38";
 		assertEquals(output, gradeSystem.showRank("962001044"));
 	}
 	
@@ -52,7 +52,7 @@ class TestShowRank {
 	
 	@Test
 	public void testShowRank4() {
-		String output = "InputError";
+		String output = "Input Error";
 		assertEquals(output, gradeSystem.showRank(""));
 	}
 	

@@ -11,26 +11,26 @@ import org.junit.Test;
 
 import main.UI;
 
-class TestShowFinishMsg {
+public class TestShowFinishMsg {
 
 	private UI aUI = new UI();
-	final String WelcomMsg = "See you ï¿½ï¿½ï¿½ï¿½ï¿½F!!!\r\n";
+	final String finishMsg = "See you µ²§ô¤F!!!\r\n";
 	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
 	@Before
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 		System.setOut(new PrintStream(outContent));
 	}
 
 	@After
-	void tearDown() throws Exception {
+	public void tearDown() throws Exception {
 		aUI = null;
 	}
 
 	@Test
-	void test() {
+	public void test() {
 		aUI.showFinishMsg();
-		assertEquals(WelcomMsg, outContent);
+		assertEquals(finishMsg, outContent.toString());
 	}
 
 }

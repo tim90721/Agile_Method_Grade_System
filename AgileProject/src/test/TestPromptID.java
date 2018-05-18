@@ -10,48 +10,48 @@ import org.junit.Test;
 
 import main.UI;
 
-class TestPromptID {
+public class TestPromptID {
 	
 	private UI aUI = new UI();
 	
 	private ByteArrayInputStream inContent;
 	private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	
+	private String outMsg = "輸入ID或Q(結束使用)?\r\n";
 	@Before
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 		System.setOut (new PrintStream (outContent));
 	}
 
 	@After
-	void tearDown() throws Exception {
+	public void tearDown() throws Exception {
 		aUI = null;
 		outContent = null;
 	}
 
 	@Test
-	void testPromptID1() {
+	public void testPromptID1() {
 		inContent = new ByteArrayInputStream("Q".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptID();
-		assertEquals("輸入ID或 Q (結束使用)？", outContent);
+		assertEquals(outMsg, outContent.toString());
 		assertEquals ("Q", result);
 	}
 	
 	@Test
-	void testPromptID2() {
+	public void testPromptID2() {
 		inContent = new ByteArrayInputStream("962001044".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptID();
-		assertEquals("輸入ID或 Q (結束使用)？", outContent);
+		assertEquals(outMsg, outContent.toString());
 		assertEquals ("962001044", result);
 	}
 	
 	@Test
-	void testPromptID3() {
+	public void testPromptID3() {
 		inContent = new ByteArrayInputStream("1234567".getBytes());
 		System.setIn(inContent);
 		String result = aUI.promptID();
-		assertEquals("輸入ID或 Q (結束使用)？", outContent);
+		assertEquals(outMsg, outContent.toString());
 		assertEquals ("1234567", result);
 	}
 

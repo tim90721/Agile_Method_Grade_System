@@ -22,7 +22,7 @@ test case3: ID 1234567
 test case4: ID ""
 **************************************************************************** */
 
-class TestShowGrade {
+public class TestShowGrade {
 	private GradeSystem gradeSystem;
 	
 	@Before
@@ -37,7 +37,8 @@ class TestShowGrade {
 	
 	@Test
 	public void testShowGrade1() {
-		String output = "§õ«Â§Ê¦¨ÁZ:lab1:\t81\n"
+		String output = "§õ«Â§Ê¦¨ÁZ:\n"
+				+ "lab1:\t81\n"
 				+ "lab2:\t98\n"
 				+ "lab3:\t84\n"
 				+ "midTerm:\t90\n"
@@ -48,7 +49,8 @@ class TestShowGrade {
 	
 	@Test
 	public void testShowGrade2() {
-		String output = "­â©v§Ê¦¨ÁZ:lab1:\t87\n"
+		String output = "­â©v§Ê¦¨ÁZ:\n"
+				+ "lab1:\t87\n"
 				+ "lab2:\t86\n"
 				+ "lab3:\t98\n"
 				+ "midTerm:\t88\n"

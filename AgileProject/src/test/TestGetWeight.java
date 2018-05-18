@@ -18,7 +18,7 @@ test case2: Index 0 ~ 4
 
 **************************************************************************** */
 
-class TestGetWeight {
+public class TestGetWeight {
 	private GradeSystem gradeSystem;
 
 	@Before

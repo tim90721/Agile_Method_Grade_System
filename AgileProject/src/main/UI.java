@@ -63,12 +63,12 @@ public class UI {
 		switch(command){
 		case "G":
 		case "g":
-			System.out.println(aGradeSystem.showGrade(id));
+			System.out.print(aGradeSystem.showGrade(id));
 			outputCommand = "Grade";
 			break;
 		case "R":
 		case "r":
-			System.out.println(aGradeSystem.showRank(id));
+			System.out.print(aGradeSystem.showRank(id));
 			outputCommand = "Rank";
 			break;
 		case "W":
@@ -81,10 +81,8 @@ public class UI {
 			outputCommand = "Exit";
 			break;
 		default:
-			scanner.close();
 			throw new NoSuchCommandExceptions(command);
 		}
-		scanner.close();
 		return outputCommand;
 	}
 	
@@ -97,10 +95,12 @@ public class UI {
 		3.	回傳 true
 	--------------------------------------------------------------------- */
 	public boolean checkID(String ID) throws NoSuchIDExceptions{
-		if(aGradeSystem.containsID(id))
+		if(aGradeSystem.containsID(ID)) {
+			this.id = ID;
 			return true;
+		}
 		else
-			throw new NoSuchIDExceptions(id);
+			throw new NoSuchIDExceptions(ID);
 	}
 	
 	/** -------------------------------------------------------------------
@@ -113,9 +113,8 @@ public class UI {
 	public String promptID(){
 		String id;
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("輸入ID或Q(結束使用)? \r\n");
-		id = scanner.next();
-		scanner.close();
+		System.out.println("輸入ID或Q(結束使用)?");
+		id = scanner.nextLine();
 		return id;
 	}
 	
@@ -124,7 +123,7 @@ public class UI {
 		顯示"結束了\r\n"
 	--------------------------------------------------------------------- */
 	public void showFinishMsg(){
-		System.out.println("結束了");
+		System.out.println("See you 結束了!!!");
 	}
 	
 	/** -------------------------------------------------------------------
@@ -135,8 +134,8 @@ public class UI {
 	public String showWelcomeMsg(String ID){
 		String name;
 		String message;
-		name = aGradeSystem.getGradeName(id);
-		message = "Welcome " + name;
+		name = aGradeSystem.getGradeName(ID);
+		message = "Welcome 歡迎!!!" + name;
 		System.out.println(message);
 		return message;
 	}

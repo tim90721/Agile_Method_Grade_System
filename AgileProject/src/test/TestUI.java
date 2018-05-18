@@ -6,11 +6,10 @@ import org.junit.Test;
 
 import main.UI;
 
-class TestUI {
+public class TestUI {
 
 	@Test
-	void testUI() {
+	public void testUI() {
 		assertNotNull(new UI());
 	}
-
 }

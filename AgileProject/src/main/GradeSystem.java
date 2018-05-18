@@ -49,7 +49,6 @@ public class GradeSystem {
 			Scanner input = new Scanner(file);
 
 			while (input.hasNextLine()) {
-				System.out.println("a");
 				String str = input.nextLine();
 				if(str.equals(""))
 					break;
@@ -89,7 +88,7 @@ public class GradeSystem {
 		Grades grade = getGradeFromList(ID);
 		if (grade == null)
 			return "Input Error";
-		String message = grade.getName() + "成績:lab1:\t" + grade.getLab1() + "\n" + "lab2:\t" + grade.getLab2() + "\n"
+		String message = grade.getName() + "成績:\nlab1:\t" + grade.getLab1() + "\n" + "lab2:\t" + grade.getLab2() + "\n"
 				+ "lab3:\t" + grade.getLab3() + "\n" + "midTerm:\t" + grade.getMidTerm() + "\n" + "finalExam:\t"
 				+ grade.getFinal() + "\n" + "total grade:\t" + grade.calculateTotalGrade(weights) + "\n";
 		return message;
@@ -129,7 +128,7 @@ public class GradeSystem {
 		double[] new_weights = getNewWeights();
 
 		if (this.checkWeights(new_weights)) {
-			System.out.println("請確認新配分");
+			System.out.print("請確認新配分\n");
 			this.showWeight(new_weights);
 
 			System.out.print("以上正確嗎? Y (Yes) 或 N (No)");
@@ -160,7 +159,6 @@ public class GradeSystem {
 	 * /* public String getGradeName(String id) /* 取得 id 所對應的名稱，若 id 不存在則回傳 null /
 	 *************************************************************************/
 	public String getGradeName(String ID) {
-		System.out.println(ID);
 		Grades grade = getGradeFromList(ID);
 		return grade.getName();
 	}
@@ -208,24 +206,24 @@ public class GradeSystem {
 	}
 
 	/*************************************************************************
-	 * /* private void showWeight(float[] weights): 依給定參數顯示配分 /
+	 * /* private void showWeight(List<Double> weights): 依給定參數顯示配分 /
 	 *************************************************************************/
 	private void showWeight(List<Double> weights) {
-		System.out.println("\tlab1\t" + Math.round(weights.get(0) * 100) + "%\n" + "\tlab2\t"
+		System.out.print("\tlab1\t" + Math.round(weights.get(0) * 100) + "%\n" + "\tlab2\t"
 				+ Math.round(weights.get(1) * 100) + "%\n" + "\tlab3\t" + Math.round(weights.get(2) * 100) + "%\n"
 				+ "\tmid-term\t" + Math.round(weights.get(3) * 100) + "%\n" + "\tfinal exam\t"
-				+ Math.round(weights.get(4) * 100) + "%");
+				+ Math.round(weights.get(4) * 100) + "%\n");
 	}
 	
 	/*************************************************************************
-	/*	private void showWeight(float[] weights): 依給定參數顯示配分
+	/*	private void showWeight(double[] weights): 依給定參數顯示配分
 	/*************************************************************************/
 	private void showWeight(double[] weights) {
-		System.out.println( "\tlab1\t" + Math.round(weights[0]*100) + "%\n" +
+		System.out.print( "\tlab1\t" + Math.round(weights[0]*100) + "%\n" +
 							"\tlab2\t" + Math.round(weights[1]*100) + "%\n" +
 							"\tlab3\t" + Math.round(weights[2]*100) + "%\n" +
 							"\tmid-term\t" + Math.round(weights[3]*100) + "%\n" +
-							"\tfinal exam\t" + Math.round(weights[4]*100) + "%");
+							"\tfinal exam\t" + Math.round(weights[4]*100) + "%\n");
 	}
 	
 
@@ -237,12 +235,12 @@ public class GradeSystem {
 		String[] prompt_string = new String[] { "lab1", "lab2", "lab3", "mid-term", "final exam" };
 		double[] new_weights = new double[5];
 
-		System.out.println("輸入新配分");
+		System.out.print("輸入新配分\n");
 		for (int i = 0; i < 5; ++i) {
 			System.out.print("\t" + prompt_string[i] + "\t");
-			new_weights[i] = input.nextFloat() / 100;
+			new_weights[i] = input.nextDouble() / 100;
 		}
-
+		
 		return new_weights;
 	}
 
@@ -250,7 +248,7 @@ public class GradeSystem {
 	 * /* private boolean checkWeights(float[] weights): 測試傳入的 weights 是曾合法 /
 	 *************************************************************************/
 	private boolean checkWeights(double[] weights) {
-		float sum = 0;
+		double sum = 0;
 		for (int i = 0; i < weights.length; ++i) {
 			sum += weights[i];
 		}

@@ -33,18 +33,18 @@ public class Main {
 				break;
 			try {
 				aUI.checkID(id);
+				aUI.showWelcomeMsg(id);
+				while (true) {
+					try {
+						if (aUI.promptCommand().equals("Exit"))
+							break;
+					}
+					catch (NoSuchCommandExceptions ex) {
+						System.out.println(ex.getMessage());
+					}
+				}
 			} catch (NoSuchIDExceptions ex) {
-				System.out.println(ex.getMessage() + id);
-			}
-			aUI.showWelcomeMsg(id);
-			while (true) {
-				try {
-					if (!aUI.promptCommand().equals("Exit"))
-						break;
-				}
-				catch (NoSuchCommandExceptions ex) {
-					System.out.println(ex.getMessage());
-				}
+				System.out.println(ex.getMessage());
 			}
 		}
 		aUI.showFinishMsg();

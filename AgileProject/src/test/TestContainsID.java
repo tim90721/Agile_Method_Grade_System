@@ -18,7 +18,7 @@ test case 4: ID 123456789 (¿ù»~ID)
 test case 5: ID ¡§¡¨       (empty string)
 **************************************************************************** */
 
-class TestContainsID {
+public class TestContainsID {
 
 	private GradeSystem gradeSystem;
 	

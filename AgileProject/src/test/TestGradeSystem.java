@@ -14,10 +14,10 @@ gradeSystem
 test case: test GradeSystem's constructor works fine
 **************************************************************************** */
 
-class TestGradeSystem {
+public class TestGradeSystem {
 
 	@Test
-	void testGradeSystem() {
+	public void testGradeSystem() {
 		GradeSystem gradeSystem = new GradeSystem();
 		assertNotNull(gradeSystem);
 	}

@@ -5,7 +5,7 @@ public class NoSuchCommandExceptions extends Exception{
 	private String message;
 	
 	public NoSuchCommandExceptions(String command) {
-		message = "No command named" + command;
+		message = "No command named " + command;
 	}
 
 	@Override

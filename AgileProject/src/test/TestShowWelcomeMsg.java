@@ -14,7 +14,7 @@ aGrade: ID 962001051 name李威廷
 
 test case1: ID 962001051
 **************************************************************************** */
-class TestShowWelcomeMsg {
+public class TestShowWelcomeMsg {
 	
 	private UI aUI = new UI();
 	final String welcomMsg = "Welcome 歡迎!!!";
@@ -22,20 +22,20 @@ class TestShowWelcomeMsg {
 	final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
 	@Before
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 		System.setOut(new PrintStream(outContent));
 	}
 
 	@After
-	void tearDown() throws Exception {
+	public void tearDown() throws Exception {
 		aUI = null;
 	}
 
 	@Test
-	void test() {
+	public void test() {
 		String ID = "962001051";
 		aUI.showWelcomeMsg(ID);
-		assertEquals(welcomMsg + "李威廷", outContent);
+		assertEquals(welcomMsg + "李威廷\r\n", outContent.toString());
 	}
 
 }
